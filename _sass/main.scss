@@ -1,0 +1,79 @@
+@import 'normalize';
+@import 'utilities';
+
+$backgroundColor: #111111;
+$bodyColor: #E8E8E8;
+$bodyFont: 'IBM Plex Sans', sans-serif;
+
+body {
+  background: $backgroundColor;
+  color: $bodyColor;
+  font-family: $bodyFont;
+  line-height: 1.25;
+}
+
+a {
+  color: $bodyColor;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 600;
+}
+
+nav {
+  display: grid;
+  margin: 0 auto;
+  max-width: 71rem;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 90vh;
+  grid-gap: 20px;
+  align-items: center;
+  justify-items: center; /* adjusted */
+  margin: 0 auto;
+  max-width: 71rem;
+}
+
+.logo {
+  margin-top: 0.63rem;
+  grid-column: 1 / span 3;
+  text-decoration: none;
+}
+
+.hero-text {
+  align-self: center;
+  grid-column: 1 / span 12;
+  max-width: 35rem;
+}
+
+.links {
+  margin-top: 0.63rem;
+  grid-column: 4 / span 9;
+  text-align: right;
+}
+
+.links a {
+  margin-left: 50px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 71.25rem) {
+  nav {
+    margin: 15px;
+  }
+  h1 {
+    font-size: 1.88rem;
+  }
+}
